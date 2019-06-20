@@ -21,8 +21,12 @@ const Header = () => (
           }
         `}
         render={data => <StyledImg fluid={data.placeholderImage.childImageSharp.fluid} />}
-      />      
-      <StyledLink to="/" />
+      />
+      <NavBar> 
+        <StyledLink to="/">Inicio</StyledLink>
+        <StyledLink to="/">Blog</StyledLink>
+        <StyledLink to="/">Contacto</StyledLink>    
+      </NavBar>
     </HeaderContent>
   </HeaderWrapper>
 )
@@ -38,17 +42,26 @@ const HeaderContent = styled.div`
   padding: 1% 3%;   
   position: relative;
   display: flex;
+  justify-content: space-around;
   height: 80px;
 `
 
 const StyledLink = styled(Link)`
   color: white;
+  padding: 0 6%;
   text-decoration: none;
 `
 
 const StyledImg = styled(Img)`
   height: 100%;
+  margin: 0 2%;
   width: 12%;
+`
+const NavBar = styled.div`
+  margin: 0 2%;
+  width: fit-content;
+  align-items: center;
+  display: flex;
 `
 
 Header.propTypes = {

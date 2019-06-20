@@ -11,11 +11,8 @@ import styled from "styled-components"
 import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Footer from "./Footer"
 import "./layout.css"
-
-const Body = styled.div `
-  background-color: black;
-`
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -32,15 +29,17 @@ const Layout = ({ children }) => (
       <Body>
         <Header siteTitle={data.site.siteMetadata.title} />
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <Footer />
       </Body>
     )}
   />
 )
+
+const Body = styled.div `
+  background-color: black;
+  font-family: sans-serif;
+  height: -webkit-fill-available;
+`
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
