@@ -12,6 +12,7 @@ import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Footer from "./Footer"
+import backgroundImage from "../images/background.png"
 import "./layout.css"
 
 const Layout = ({ children }) => (
@@ -37,7 +38,9 @@ const Layout = ({ children }) => (
 
 const Body = styled.div `
   background-color: black;
-  font-family: sans-serif;
+  background-size: cover;
+  background-image: url(${backgroundImage});
+  font-family: 'Nanum Gothic', sans-serif;
   height: -webkit-fill-available;
 `
 

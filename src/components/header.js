@@ -32,7 +32,7 @@ const Header = () => (
 )
 
 const HeaderWrapper = styled.div`
-  margin: 3% 0;
+  margin: 2% 0;
   background: linear-gradient(45deg, rgba(33,193,251,1) 0%, rgba(129,32,227,1) 100%);
   width: 100%;
   position: absolute;
@@ -43,7 +43,7 @@ const HeaderContent = styled.div`
   position: relative;
   display: flex;
   justify-content: space-around;
-  height: 80px;
+  height: 70px;
 `
 
 const StyledLink = styled(Link)`
