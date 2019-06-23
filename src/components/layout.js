@@ -41,6 +41,7 @@ const Body = styled.div `
   background-size: cover;
   background-image: url(${backgroundImage});
   font-family: 'Nanum Gothic', sans-serif;
+  color: white;
   height: -webkit-fill-available;
 `
 

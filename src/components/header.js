@@ -35,27 +35,27 @@ const HeaderWrapper = styled.div`
   margin: 2% 0;
   background: linear-gradient(45deg, rgba(33,193,251,1) 0%, rgba(129,32,227,1) 100%);
   width: 100%;
-  position: absolute;
+  position: absolute;    
 `;
 
 const HeaderContent = styled.div`
-  padding: 1% 3%;   
+  padding: 0 3%;   
   position: relative;
   display: flex;
   justify-content: space-around;
-  height: 70px;
+  height: auto;
 `
 
 const StyledLink = styled(Link)`
   color: white;
   padding: 0 6%;
-  text-decoration: none;
+  text-decoration: none;   
 `
 
 const StyledImg = styled(Img)`
   height: 100%;
   margin: 0 2%;
-  width: 12%;
+  width: 10%;
 `
 const NavBar = styled.div`
   margin: 0 2%;
