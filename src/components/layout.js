@@ -29,7 +29,7 @@ const Layout = ({ children }) => (
     render={data => (
       <Body>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <main>{children}</main>
+        <StyledMain>{children}</StyledMain>
         <Footer />
       </Body>
     )}
@@ -46,6 +46,10 @@ const Body = styled.div `
   height: 100%;
   position: absolute;
   width: 100%;  
+`
+
+const StyledMain = styled.main`
+  margin: 0 2%;
 `
 
 Layout.propTypes = {
