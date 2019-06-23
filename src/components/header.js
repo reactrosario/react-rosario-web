@@ -26,6 +26,7 @@ const Header = () => (
         <StyledLink to="/">Inicio</StyledLink>
         <StyledLink to="/">Blog</StyledLink>
         <StyledLink to="/">Contacto</StyledLink>    
+        <StyledLink to="/demo">Demo</StyledLink>    
       </NavBar>
     </HeaderContent>
   </HeaderWrapper>
@@ -35,12 +36,10 @@ const HeaderWrapper = styled.div`
   margin: 2% 0;
   background: linear-gradient(45deg, rgba(33,193,251,1) 0%, rgba(129,32,227,1) 100%);
   width: 100%;
-  position: absolute;    
 `;
 
 const HeaderContent = styled.div`
   padding: 0 3%;   
-  position: relative;
   display: flex;
   justify-content: space-around;
   height: auto;
@@ -59,7 +58,6 @@ const StyledImg = styled(Img)`
 `
 const NavBar = styled.div`
   margin: 0 2%;
-  width: fit-content;
   align-items: center;
   display: flex;
 `

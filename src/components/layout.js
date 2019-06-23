@@ -43,6 +43,9 @@ const Body = styled.div `
   font-family: 'Nanum Gothic', sans-serif;
   color: white;
   height: -webkit-fill-available;
+  height: 100%;
+  position: absolute;
+  width: 100%;  
 `
 
 Layout.propTypes = {

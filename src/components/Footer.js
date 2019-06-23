@@ -16,8 +16,8 @@ const FooterWrapper = styled.div`
   margin: 2% 0;
   background: rgba(129,32,227,1);
   width: 100%;
-  bottom: 0;
   position: absolute;
+  bottom: 0;
 `;
 
 const FooterContent = styled.div`
