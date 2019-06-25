@@ -10,19 +10,19 @@ const Demo = () => (
     <DemoWrapper>
       <StyledButton 
         first
-        background='papayawhip'
+        background='Plum'
       > 
         First
       </StyledButton>          
       <StyledButton 
         second 
-        background='palevioletred'
+        background='MediumPurple'
       >
         Second
       </StyledButton>        
       <StyledButton 
         third 
-        background='tomato'
+        background='DarkMagenta'
         className='other-style'
       >        
         Third
@@ -49,12 +49,13 @@ const StyledButton = styled.button`
   height: 80px;
   margin: 2%;
   width: 100%;
+  color: white;
   border-radius: 50px;
-  border-color: unset;
+  border: unset;
   background-color: ${({ background }) => background || 'red'};
 
   &:hover {
-    background-color: white;
+    background-color: Indigo;
     cursor: pointer;
   }
   

@@ -42,11 +42,11 @@ const HeaderContent = styled.div`
   padding: 0 3%;   
   display: flex;
   justify-content: space-around;
-  height: auto;
 `
 
 const StyledLink = styled(Link)`
   color: white;
+  width: 100%;
   padding: 0 6%;
   text-decoration: none;   
 `
