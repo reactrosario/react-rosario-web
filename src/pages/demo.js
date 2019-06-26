@@ -9,23 +9,24 @@ const Demo = () => (
     <SEO title="Demo" />
     <DemoWrapper>
       <StyledButton 
-        first
         background='Plum'
       > 
         First
       </StyledButton>          
       <StyledButton 
-        second 
         background='MediumPurple'
       >
         Second
       </StyledButton>        
       <StyledButton 
-        third 
         background='DarkMagenta'
         className='other-style'
+        // as={ReversedButton}
       >        
         Third
+        {/* <div className="other-style">
+          Class
+        </div> */}
       </StyledButton>
       {/* <div className='another-style'>
         <StyledButton 
@@ -45,6 +46,8 @@ const DemoWrapper = styled.div`
   flex-direction: row;
 `
 
+const ReversedButton = props => <button {...props} children={props.children.split('').reverse()} />
+
 const StyledButton = styled.button`
   height: 80px;
   margin: 2%;
@@ -59,9 +62,9 @@ const StyledButton = styled.button`
     cursor: pointer;
   }
   
-  // &.other-style{
-  //   border-color: yellow;
-  // }
+  &.other-style{
+    border: 1px solid yellow; 
+  }
 
   // & ~ & {
   //   background: pink; // <StyledButton> as a sibling of <StyledButton>, but maybe not directly next to it

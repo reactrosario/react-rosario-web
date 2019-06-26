@@ -1,12 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Img from "gatsby-image"
-import styled from "styled-components"
+import styled, { createGlobalStyle } from "styled-components"
 import { StaticQuery, graphql, Link } from "gatsby"
 
 
 const Header = () => (
   <HeaderWrapper>
+    <GlobalStyle />
     <HeaderContent>
       <StaticQuery
         query={graphql`
@@ -34,21 +35,23 @@ const Header = () => (
 
 const HeaderWrapper = styled.div`
   margin: 2% 0;
-  background: linear-gradient(45deg, rgba(33,193,251,1) 0%, rgba(129,32,227,1) 100%);
   width: 100%;
+
+  && {
+    background: linear-gradient(45deg, rgba(33,193,251,1) 0%, rgba(129,32,227,1) 100%);
+  }
 `;
+
+const GlobalStyle = createGlobalStyle`
+  div${HeaderWrapper} {
+    background: green;
+  }
+`
 
 const HeaderContent = styled.div`
   padding: 0 3%;   
   display: flex;
   justify-content: space-around;
-`
-
-const StyledLink = styled(Link)`
-  color: white;
-  width: 100%;
-  padding: 0 6%;
-  text-decoration: none;   
 `
 
 const StyledImg = styled(Img)`
@@ -60,6 +63,13 @@ const NavBar = styled.div`
   margin: 0 2%;
   align-items: center;
   display: flex;
+`
+
+const StyledLink = styled(Link)`
+  color: white;
+  width: 100%;
+  padding: 0 6%;
+  text-decoration: none;   
 `
 
 Header.propTypes = {
