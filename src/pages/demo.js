@@ -12,30 +12,17 @@ const Demo = () => (
         background='Plum'
       > 
         First
-      </StyledButton>          
+      </StyledButton> 
       <StyledButton 
         background='MediumPurple'
       >
         Second
-      </StyledButton>        
+      </StyledButton>       
       <StyledButton 
         background='DarkMagenta'
-        className='other-style'
-        // as={ReversedButton}
       >        
         Third
-        {/* <div className="other-style">
-          Class
-        </div> */}
-      </StyledButton>
-      {/* <div className='another-style'>
-        <StyledButton 
-          fourth 
-          background='orange'
-        >        
-          Fourth
-        </StyledButton>         
-      </div>                */}
+      </StyledButton>                  
     </DemoWrapper>
   </Layout>
 )
@@ -62,7 +49,7 @@ const StyledButton = styled.button`
     cursor: pointer;
   }
   
-  &.other-style{
+  $.other-style{
     border: 1px solid yellow; 
   }
 
