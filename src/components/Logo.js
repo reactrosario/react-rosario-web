@@ -15,29 +15,37 @@ import styled from "styled-components"
  */
 
 const Logo = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        placeholderImage: file(relativePath: { eq: "logo.png" }) {
-          childImageSharp {
-            fluid(maxWidth: 900) {
-              ...GatsbyImageSharpFluid
+  <LogoWrapper>
+    <StaticQuery
+      query={graphql`
+        query {
+          placeholderImage: file(relativePath: { eq: "logo.png" }) {
+            childImageSharp {
+              fluid(maxWidth: 900) {
+                ...GatsbyImageSharpFluid
+              }
             }
           }
         }
+      `}
+      render={data =>
+        <StyledImg
+          fluid={data.placeholderImage.childImageSharp.fluid}
+          imgStyle={{
+            maxWidth: 900,
+            objectFit: 'contain',
+          }}
+        />
       }
-    `}
-    render={data =>
-      <StyledImg
-        fluid={data.placeholderImage.childImageSharp.fluid}
-        imgStyle={{
-          maxWidth: 900,
-          objectFit: 'contain',
-        }}
-      />
-    }
-  />
+    />
+  </LogoWrapper>
 )
+
+const LogoWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+`
+
 const StyledImg = styled(Img)`
   height: 50%;
   width: 50%;
