@@ -9,30 +9,27 @@ const Demo = () => (
   <Layout>
     <SEO title="Demo" />
     <DemoWrapper>
-      <Button 
+      <Button
         background='Plum'
-      > 
+      >
         First
-      </Button> 
-      <Button 
+      </Button>
+      <Button
         background='MediumPurple'
       >
         Second
-      </Button>       
-      <OverrideButton 
+      </Button>
+      <Button
         background='DarkMagenta'
-      >        
+        border='2px solid lime'
+      >
         Third
-      </OverrideButton>                  
+      </Button>
     </DemoWrapper>
   </Layout>
 )
 
 export default Demo
-
-const OverrideButton = styled(Button)`
-  border: 2px solid lime;
-`;
 
 const DemoWrapper = styled.div`
   display: flex;
