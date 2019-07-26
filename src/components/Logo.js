@@ -14,29 +14,6 @@ const wiggle = keyframes`
   100% { transform: translateX(0);    }
 `;
 
-const fade = keyframes`
-0% {
-fill:#61DAFB;
-}
-50% {
- fill:black;
-}
-100%{
-  fill:#61DAFB;
-}
-`;
-
-const coolBoxKeyframes = keyframes`
-  0% {
-    height: 0px;
-    background: green;
-  }
-  100% {
-    height: 200px;
-    background: blue;
-  }
-`
-
 const StyledLogo = styled(LogoImage)`
   margin-top: -395px;
   .fil0, .fil1, .fil2, .fil3 {
