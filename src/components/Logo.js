@@ -1,44 +1,9 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 import styled, { keyframes } from "styled-components"
 import LogoImage from '../images/logo.svg';
 
-/*
- * This component is built using `gatsby-image` to automatically serve optimized
- * images with lazy loading and reduced file sizes. The image is loaded using a
- * `StaticQuery`, which allows us to load the image from directly within this
- * component, rather than having to pass the image data down from pages.
- *
- * For more information, see the docs:
- * - `gatsby-image`: https://gatsby.dev/gatsby-image
- * - `StaticQuery`: https://gatsby.dev/staticquery
- */
-
 const Logo = () => (
   <StyledLogo />
-  // <StaticQuery
-  //   query={graphql`
-  //     query {
-  //       placeholderImage: file(relativePath: { eq: "logo.png" }) {
-  //         childImageSharp {
-  //           fluid(maxWidth: 900) {
-  //             ...GatsbyImageSharpFluid
-  //           }
-  //         }
-  //       }
-  //     }
-  //   `}
-  //   render={data =>
-      // <StyledImg
-      //   fluid={data.placeholderImage.childImageSharp.fluid}
-      //   imgStyle={{
-      //     maxWidth: 900,
-      //     objectFit: 'contain',
-      //   }}
-      // />
-  //   }
-  // />
 )
 
 const wiggle = keyframes`
@@ -75,13 +40,19 @@ const coolBoxKeyframes = keyframes`
 const StyledLogo = styled(LogoImage)`
   margin-top: -395px;
   .fil0, .fil1, .fil2, .fil3 {
-    transition: 1s;
+    transition: 0.5s;
   }
-  .fil0:hover {
+  #bar0:hover {
     transform: translateX(500px);
   }
-  .fil1:hover {
-    transform: translateY(500px);
+  #bar1:hover {
+    transform: translateY(250px);
+  }
+  #main-shape {
+    transform-origin: center;
+    &:hover {
+      transform: rotate(20deg);
+    }
   }
 `
 
