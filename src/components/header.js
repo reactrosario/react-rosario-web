@@ -49,15 +49,15 @@ const GlobalStyle = createGlobalStyle`
 `
 
 const HeaderContent = styled.div`
-  padding: 0 3%;   
+  padding: 0 3%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 `
 
 const StyledImg = styled(Img)`
   height: 100%;
   margin: 0 2%;
-  width: 10%;
+  width: 9%;
 `
 const NavBar = styled.div`
   margin: 0 2%;
