@@ -35,7 +35,7 @@ const Title = styled.p`
   font-weight: bold;
   font-size: 3rem;
   top: 175px;
-  left: 375px;
+  left: 350px;
 `
 
 export default Logo;
