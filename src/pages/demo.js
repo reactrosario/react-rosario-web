@@ -36,5 +36,3 @@ const DemoWrapper = styled.div`
   height: 100%;
   flex-direction: row;
 `;
-
-const ReversedButton = props => <button {...props} children={props.children.split('').reverse()} />

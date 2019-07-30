@@ -27,7 +27,6 @@ const Header = () => (
         <StyledLink to="/">Inicio</StyledLink>
         <StyledLink to="/">Blog</StyledLink>
         <StyledLink to="/">Contacto</StyledLink>
-        <StyledLink to="/demo">Demo</StyledLink>
       </NavBar>
     </HeaderContent>
   </HeaderWrapper>
@@ -79,10 +78,6 @@ const StyledLink = styled(Link)`
   &:hover, &:focus {
     border-bottom: 3px solid white;
   }
-`
-
-const LinkContainer = styled.div`
-  
 `
 
 Header.propTypes = {
