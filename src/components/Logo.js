@@ -1,10 +1,15 @@
-import React from "react"
+import React, { Fragment } from "react"
 import styled from "styled-components"
 import LogoImage from '../images/logo.svg';
 
-const Logo = () => (
-  <StyledLogo />
-);
+const Logo = () => {
+  return (
+    <Fragment>
+      <Title>REACT</Title>
+      <StyledLogo />
+    </Fragment>
+  );
+}
 
 const StyledLogo = styled(LogoImage)`
   margin-top: -395px;
@@ -23,6 +28,14 @@ const StyledLogo = styled(LogoImage)`
       transform: rotate(20deg);
     }
   }
+`
+
+const Title = styled.p`
+  position: absolute;
+  font-weight: bold;
+  font-size: 3rem;
+  top: 175px;
+  left: 375px;
 `
 
 export default Logo;
