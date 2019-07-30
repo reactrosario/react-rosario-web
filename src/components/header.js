@@ -23,11 +23,11 @@ const Header = () => (
         `}
         render={data => <StyledImg fluid={data.placeholderImage.childImageSharp.fluid} />}
       />
-      <NavBar> 
+      <NavBar>
         <StyledLink to="/">Inicio</StyledLink>
         <StyledLink to="/">Blog</StyledLink>
-        <StyledLink to="/">Contacto</StyledLink>    
-        <StyledLink to="/demo">Demo</StyledLink>    
+        <StyledLink to="/">Contacto</StyledLink>
+        <StyledLink to="/demo">Demo</StyledLink>
       </NavBar>
     </HeaderContent>
   </HeaderWrapper>
@@ -39,6 +39,7 @@ const HeaderWrapper = styled.div`
 
   && {
     background: linear-gradient(45deg, rgba(33,193,251,1) 0%, rgba(129,32,227,1) 100%);
+    // background: linear-gradient(45deg, rgba(129,32,227,1) 100%, rgba(33,193,251,1) 0%);
   }
 `;
 
@@ -49,7 +50,6 @@ const GlobalStyle = createGlobalStyle`
 `
 
 const HeaderContent = styled.div`
-  padding: 0 3%;
   display: flex;
   justify-content: space-between;
 `
@@ -57,19 +57,32 @@ const HeaderContent = styled.div`
 const StyledImg = styled(Img)`
   height: 100%;
   margin: 0 2%;
-  width: 9%;
+  width: 90px;
 `
 const NavBar = styled.div`
-  margin: 0 2%;
-  align-items: center;
   display: flex;
+  align-items: center;
+  width: 35%;
 `
 
 const StyledLink = styled(Link)`
+  display: flex;
+  flex: 1 1 0;
+  margin-right: 15px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
   color: white;
-  width: 100%;
-  padding: 0 6%;
-  text-decoration: none;   
+  font-size: 1.25rem;
+  text-decoration: none;
+  transition: border 1s linear forward;
+  &:hover, &:focus {
+    border-bottom: 3px solid white;
+  }
+`
+
+const LinkContainer = styled.div`
+  
 `
 
 Header.propTypes = {
