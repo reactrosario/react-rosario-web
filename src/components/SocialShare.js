@@ -13,19 +13,19 @@ const SocialShare = () => (
   <SocialShareWrapper>
     {/* TODO: change to as="a" */}
     <Link href="https://www.facebook.com/React-Rosario-359696574659484/">
-      <FontAwesomeIcon icon={faFacebookSquare} />
+      <FontAwesomeIcon icon={faFacebookSquare} color="white" />
     </Link>
     <Link href="https://github.com/reactrosario">
-      <FontAwesomeIcon icon={faGithub} />
+      <FontAwesomeIcon icon={faGithub} color="white" />
     </Link>
     <Link href="https://www.instagram.com/reactrosario/">
-      <FontAwesomeIcon icon={faInstagram} />
+      <FontAwesomeIcon icon={faInstagram} color="white" />
     </Link>
     <Link href="https://twitter.com/reactrosario">
-      <FontAwesomeIcon icon={faTwitter} />
+      <FontAwesomeIcon icon={faTwitter} color="white" />
     </Link>
     <Link href="https://meetupjs.slack.com/">
-      <FontAwesomeIcon icon={faSlack} />
+      <FontAwesomeIcon icon={faSlack} color="white" />
     </Link>
   </SocialShareWrapper>
 )
