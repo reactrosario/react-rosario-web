@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="reactrosario.netlify.com">
+  <a href="https://reactrosario.netlify.com">
     <img alt="React Rosario logo" src="https://i.imgur.com/98A4COv.png" width="60" />
   </a>
 </p>
