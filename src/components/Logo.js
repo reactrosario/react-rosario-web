@@ -5,7 +5,6 @@ import LogoImage from '../images/logo.svg';
 const Logo = () => {
   return (
     <Fragment>
-      <Title>REACT</Title>
       <StyledLogo />
     </Fragment>
   );
