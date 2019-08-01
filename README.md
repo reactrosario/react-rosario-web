@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://www.reactrosario.netlify.com">
+  <a href="reactrosario.netlify.com">
     <img alt="React Rosario logo" src="https://i.imgur.com/98A4COv.png" width="60" />
   </a>
 </p>
@@ -7,7 +7,7 @@
   React Rosario Web
 </h1>
 
-[React Rosario Website](reactrosario.netlify.com)
+[React Rosario Website](https://reactrosario.netlify.com)
 
 A site made to post all the news about the React Rosario community, upcoming meetups, blog posts from the presenters, information gathered, and so on.
 
