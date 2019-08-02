@@ -29,13 +29,13 @@ It's built using React and generated with Gatsby.
     yarn install
     ```
 
-2.  **Start the development server**
+3.  **Start the development server**
 
     ```sh
     yarn develop
     ```
 
-3.  **Start editing and adding stuff**
+4.  **Start editing and adding stuff**
 
     The site is now running at `http://localhost:8000`!
     
