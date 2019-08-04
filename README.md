@@ -19,19 +19,23 @@ It's built using React and generated with Gatsby.
 ## ⚛️ How to start developing
 
 
-1.  **Install Gatsby**
+1.  **Install Yarn**
 
-    From the official website [Gatsby](https://www.gatsbyjs.org/).
+    Gatsby uses **yarn** as package manager, so if you don't have **yarn** installed -> [install yarn](https://yarnpkg.com/en/docs/install)
 
-2.  **Start the development server**
-
-    Open a command line and inside the project's folder run
+2. **Install dependencies**
 
     ```sh
-    gatsby develop
+    yarn install
     ```
 
-3.  **Start editing and adding stuff**
+3.  **Start the development server**
+
+    ```sh
+    yarn develop
+    ```
+
+4.  **Start editing and adding stuff**
 
     The site is now running at `http://localhost:8000`!
     
