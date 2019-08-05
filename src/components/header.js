@@ -24,9 +24,9 @@ const Header = () => (
         render={data => <StyledImg fluid={data.placeholderImage.childImageSharp.fluid} />}
       />
       <NavBar>
-        <StyledLink to="/">Inicio</StyledLink>
-        <StyledLink to="/">Blog</StyledLink>
-        <StyledLink to="/">Contacto</StyledLink>
+        <StyledLink to="/"><span>Inicio</span></StyledLink>
+        <StyledLink to="/"><span>Blog</span></StyledLink>
+        <StyledLink to="/"><span>Contacto</span></StyledLink>
       </NavBar>
     </HeaderContent>
   </HeaderWrapper>
@@ -35,6 +35,7 @@ const Header = () => (
 const HeaderWrapper = styled.div`
   margin: 2% 0;
   width: 100%;
+  display: flex;
 
   && {
     background: linear-gradient(45deg, rgba(33,193,251,1) 0%, rgba(129,32,227,1) 100%);
@@ -49,6 +50,7 @@ const GlobalStyle = createGlobalStyle`
 `
 
 const HeaderContent = styled.div`
+  width: 100%;
   display: flex;
   justify-content: space-between;
 `
@@ -60,7 +62,7 @@ const StyledImg = styled(Img)`
 `
 const NavBar = styled.div`
   display: flex;
-  align-items: center;
+  justify-content: flex-end;
   width: 35%;
 `
 
@@ -75,8 +77,33 @@ const StyledLink = styled(Link)`
   font-size: 1.25rem;
   text-decoration: none;
   transition: border 1s linear forward;
-  &:hover, &:focus {
-    border-bottom: 3px solid white;
+
+  span {
+    padding: 15px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  span::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: -0.25em;
+    right: -0.25em;
+    background-color: #04BBFF;
+    transform-origin: center right;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  span:hover::before {
+    transform: scaleX(1);
+    transform-origin: center left;
+  }
+  span:active::before{
+    background-color: rgb(173, 90, 255);
   }
 `
 

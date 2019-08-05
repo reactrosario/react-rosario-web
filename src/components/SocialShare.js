@@ -9,23 +9,24 @@ import {
   faSlack,
 } from '@fortawesome/free-brands-svg-icons'
 
+
 const SocialShare = () => (
   <SocialShareWrapper>
     {/* TODO: change to as="a" */}
     <Link href="https://www.facebook.com/React-Rosario-359696574659484/">
-      <FontAwesomeIcon icon={faFacebookSquare} color="white" />
+      <span><FontAwesomeIcon  icon={faFacebookSquare} color="white"/></span>
     </Link>
     <Link href="https://github.com/reactrosario">
-      <FontAwesomeIcon icon={faGithub} color="white" />
+      <span><FontAwesomeIcon icon={faGithub} color="white" /></span>
     </Link>
     <Link href="https://www.instagram.com/reactrosario/">
-      <FontAwesomeIcon icon={faInstagram} color="white" />
+      <span><FontAwesomeIcon icon={faInstagram} color="white" /></span>
     </Link>
     <Link href="https://twitter.com/reactrosario">
-      <FontAwesomeIcon icon={faTwitter} color="white" />
+      <span><FontAwesomeIcon icon={faTwitter} color="white" /></span>
     </Link>
-    <Link href="https://meetupjs.slack.com/">
-      <FontAwesomeIcon icon={faSlack} color="white" />
+    <Link href="https://meetupjs.slack.com/"><span><FontAwesomeIcon icon={faSlack} color="white" /></span>
+          
     </Link>
   </SocialShareWrapper>
 )
@@ -38,6 +39,43 @@ const SocialShareWrapper = styled.div`
 
 const Link = styled.a`
   margin: 0 12%;
+  span {
+  z-index: 1;
+  background: transparent;
+  position: relative;
+  outline: none;
+  border: none;
+}
+
+span:hover {
+  cursor: pointer;
+}
+
+span::before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 4px solid #04BBFF;
+  transform-origin: center;
+  transform: scale(0);
+}
+
+span:hover::before {
+  transition: all 0.55s ease-in-out;
+  transform-origin: center;
+  transform: scale(2.25);
+  opacity: 0;
+}
+span:active::before {
+  transition: all 0.55s ease-in-out;
+  transform-origin: center;
+  transform: scale(2.25);
+  opacity: 0;
+}
 `
 
 export default SocialShare
