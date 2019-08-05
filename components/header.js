@@ -78,7 +78,7 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   transition: border 1s linear forward;
 
-  span {
+span {
   position: relative;
 }
 
@@ -99,10 +99,6 @@ span:hover::before {
   transform-origin: bottom left;
   transform: scaleX(1);
 }
-span:active::before{
-  transform-origin: bottom left;
-  transform: scaleX(1);
-  }
 `
 
 Header.propTypes = {
