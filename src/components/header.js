@@ -79,32 +79,26 @@ const StyledLink = styled(Link)`
   transition: border 1s linear forward;
 
   span {
-    padding: 15px;
-    position: relative;
-    z-index: 1;
-  }
-  
-  span::before {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    bottom: 0;
-    left: -0.25em;
-    right: -0.25em;
-    background-color: #04BBFF;
-    transform-origin: center right;
-    transform: scaleX(0);
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  span:hover::before {
-    transform: scaleX(1);
-    transform-origin: center left;
-  }
-  span:active::before{
-    background-color: rgb(173, 90, 255);
-  }
+  position: relative;
+}
+
+span::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #3cefff;
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+
+span:hover::before {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
 `
 
 Header.propTypes = {
