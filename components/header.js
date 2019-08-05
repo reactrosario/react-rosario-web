@@ -70,13 +70,13 @@ const StyledLink = styled(Link)`
   display: flex;
   flex: 1 1 0;
   margin-right: 15px;
+  padding:10px;
   height: 100%;
   justify-content: center;
   align-items: center;
   color: white;
   font-size: 1.25rem;
   text-decoration: none;
-  transition: border 1s linear forward;
 
 span {
   position: relative;
