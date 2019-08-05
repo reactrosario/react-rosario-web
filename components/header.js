@@ -80,6 +80,7 @@ const StyledLink = styled(Link)`
 
 span {
   position: relative;
+  padding-top: 3px;
 }
 
 span::before {
