@@ -88,7 +88,7 @@ span::before {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 2px;
+  height: 4px;
   background-color: #3cefff;
   transform-origin: bottom right;
   transform: scaleX(0);
