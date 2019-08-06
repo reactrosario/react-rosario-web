@@ -69,8 +69,6 @@ const NavBar = styled.div`
 const StyledLink = styled(Link)`
   display: flex;
   flex: 1 1 0;
-  margin-right: 15px;
-  padding:10px;
   height: 100%;
   justify-content: center;
   align-items: center;
@@ -81,7 +79,7 @@ const StyledLink = styled(Link)`
 span {
   padding: 15px;
   position: relative;
-  z-index: -1;
+  z-index: 1;
 }
 
 span::before {
@@ -96,16 +94,13 @@ span::before {
   background-color: transparent;
   transform-origin: center right;
   transform: scaleX(0);
-  transition: transform 0.5s ease;
+  transition: transform 0.2s ease-in-out;
 }
-
 span:hover::before {
-  transform-origin: center left;
   transform: scaleX(1);
+  transform-origin: center left;
 }
 span:active::before {
-  transform-origin: center left;
-  transform: scaleX(1);
   background-color: rgb(173, 90, 255);
 }
 `
