@@ -69,35 +69,37 @@ const NavBar = styled.div`
 const StyledLink = styled(Link)`
   display: flex;
   flex: 1 1 0;
-  margin-right: 15px;
   height: 100%;
   justify-content: center;
   align-items: center;
   color: white;
   font-size: 1.25rem;
   text-decoration: none;
-  transition: border 1s linear forward;
-
-  span {
+span {
+  padding: 15px;
   position: relative;
+  z-index: 1;
 }
-
 span::before {
   content: '';
   position: absolute;
+  z-index: -1;
+  top: 0;
   bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background-color: #3cefff;
-  transform-origin: bottom right;
+  left: -0.25em;
+  right: -0.25em;
+  border-bottom: 4px solid #04BBFF;
+  background-color: transparent;
+  transform-origin: center right;
   transform: scaleX(0);
-  transition: transform 0.5s ease;
+  transition: transform 0.2s ease-in-out;
 }
-
 span:hover::before {
-  transform-origin: bottom left;
   transform: scaleX(1);
+  transform-origin: center left;
+}
+span:active::before {
+  background-color: rgb(173, 90, 255);
 }
 `
 
