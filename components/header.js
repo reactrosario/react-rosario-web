@@ -79,26 +79,34 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 
 span {
+  padding: 15px;
   position: relative;
-  padding-top: 3px;
+  z-index: -1;
 }
 
 span::before {
   content: '';
   position: absolute;
+  z-index: -1;
+  top: 0;
   bottom: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background-color: #3cefff;
-  transform-origin: bottom right;
+  left: -0.25em;
+  right: -0.25em;
+  border-bottom: 4px solid #04BBFF;
+  background-color: transparent;
+  transform-origin: center right;
   transform: scaleX(0);
   transition: transform 0.5s ease;
 }
 
 span:hover::before {
-  transform-origin: bottom left;
+  transform-origin: center left;
   transform: scaleX(1);
+}
+span:active::before {
+  transform-origin: center left;
+  transform: scaleX(1);
+  background-color: rgb(173, 90, 255);
 }
 `
 
