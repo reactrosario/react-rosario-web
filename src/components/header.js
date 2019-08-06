@@ -68,6 +68,7 @@ const NavBar = styled.div`
 
 const StyledLink = styled(Link)`
   display: flex;
+  margin-right: 10px;
   flex: 1 1 0;
   height: 100%;
   justify-content: center;
