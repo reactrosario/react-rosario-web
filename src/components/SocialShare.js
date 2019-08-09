@@ -15,7 +15,6 @@ const SocialShare = () => (
     {/* TODO: change to as="a" */}
     <Link href="https://www.facebook.com/React-Rosario-359696574659484/" target="_blank">
       <FontAwesomeIcon  icon={faFacebookSquare} color="white"/>
-      sarasa
     </Link>
     <Link href="https://github.com/reactrosario" target="_blank">
       <FontAwesomeIcon icon={faGithub} color="white" />
@@ -40,7 +39,6 @@ const SocialShareWrapper = styled.div`
 
 const Link = styled.a`
   margin: 0 12%;
-
   z-index: 1;
   background: transparent;
   position: relative;
