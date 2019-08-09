@@ -12,7 +12,7 @@ import {
 
 const SocialShare = () => (
   <SocialShareWrapper>
-    {/* TODO: change to as="a" */}
+    {/*  TODO: change to as="a"  */}
     <Link href="https://www.facebook.com/React-Rosario-359696574659484/" target="_blank">
       <FontAwesomeIcon  icon={faFacebookSquare} color="white"/>
     </Link>
