@@ -45,5 +45,5 @@ It's built using React and generated with Gatsby.
 
 You can look at the issues on this repository to find a bug that needs to be fixed, so read its description and maybe you can help us fixing it. Also, you can find a bug by yourself, or something that improves the project, so post it and a start developing!
 
-At this point you may have some changes that fix some bugs in the site or just something you'd like to add, just create a Pull Request to the `development` branch and the community will be glad to take a look on this!
+At this point you may have some changes that fix some bugs in the site or just something you'd like to add, just create a Pull Request to the `master` branch and the community will be glad to take a look on this!
 If it's approved, it will be merged and deployed before the next meetup!
