@@ -11,7 +11,7 @@ const Logo = () => {
 }
 
 const StyledLogo = styled(LogoImage)`
-  margin-top: -395px;
+  width: 50%;
   .fil0, .fil1, .fil2, .fil3 {
     transition: 0.5s;
   }
