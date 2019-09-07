@@ -1,3 +1,22 @@
 {
-  "extends": "airbnb"
+  "extends": "airbnb",
+  "rules": {
+    "semi": "off",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "quotes": [
+      2,
+      "double",
+      {
+        "avoidEscape": true
+      }
+    ]
+  }
 }

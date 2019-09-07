@@ -21,12 +21,13 @@ const Header = () => (
             }
           }
         `}
-        render={data => <StyledImg fluid={data.placeholderImage.childImageSharp.fluid} />}
+        render={(data) => <StyledImg fluid={data.placeholderImage.childImageSharp.fluid} />}
       />
       <NavBar>
         <StyledLink to="/">Inicio</StyledLink>
         <StyledLink to="/">Blog</StyledLink>
         <StyledLink to="/">Contacto</StyledLink>
+        <StyledLink to="/contributors">Contribuyentes</StyledLink>
       </NavBar>
     </HeaderContent>
   </HeaderWrapper>
@@ -81,11 +82,12 @@ const StyledLink = styled(Link)`
 `
 
 Header.propTypes = {
+  // eslint-disable-next-line react/no-unused-prop-types
   siteTitle: PropTypes.string,
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: "",
 }
 
 export default Header
