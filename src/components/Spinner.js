@@ -13,7 +13,7 @@ const StyledSpinner = styled.div`
   position: relative;
   width: 8em;
   height: 8em;
-  background: url("https://react-rosario-web.netlify.com/static/f2127a3c9c343a420f514f344f03aab7/fdbb0/LogoRos.png");
+  background: url("../images/LogoRos.png");
   background-size: 100%;
   background-position: center center;
   background-repeat: no-repeat;

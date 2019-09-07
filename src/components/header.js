@@ -3,7 +3,14 @@ import PropTypes from "prop-types"
 import Img from "gatsby-image"
 import styled, { createGlobalStyle } from "styled-components"
 import { StaticQuery, graphql, Link } from "gatsby"
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faFacebookSquare,
+  faGithub,
+  faInstagram,
+  faTwitter,
+  faSlack,
+} from '@fortawesome/free-brands-svg-icons'
 
 const Header = () => (
   <HeaderWrapper>
@@ -24,9 +31,9 @@ const Header = () => (
         render={data => <StyledImg fluid={data.placeholderImage.childImageSharp.fluid} />}
       />
       <NavBar>
-        <StyledLink to="/"><span>Inicio</span></StyledLink>
-        <StyledLink to="/"><span>Blog</span></StyledLink>
-        <StyledLink to="/"><span>Contacto</span></StyledLink>
+        <StyledLink to="/"><span><FontAwesomeIcon  icon={faFacebookSquare} color="white"/>&nbsp;Inicio</span></StyledLink>
+        <StyledLink to="/"><span><FontAwesomeIcon  icon={faFacebookSquare} color="white"/>&nbsp;Blog</span></StyledLink>
+        <StyledLink to="/"><span><FontAwesomeIcon  icon={faFacebookSquare} color="white"/>&nbsp;Contacto</span></StyledLink>
       </NavBar>
     </HeaderContent>
   </HeaderWrapper>
@@ -68,7 +75,7 @@ const NavBar = styled.div`
 
 const StyledLink = styled(Link)`
   display: flex;
-  margin-right: 10px;
+  margin-right: 15px;
   flex: 1 1 0;
   height: 100%;
   justify-content: center;
@@ -76,32 +83,35 @@ const StyledLink = styled(Link)`
   color: white;
   font-size: 1.25rem;
   text-decoration: none;
-span {
-  padding: 15px;
-  position: relative;
-  z-index: 1;
-}
-span::before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: -0.25em;
-  right: -0.25em;
-  border-bottom: 4px solid #04BBFF;
-  background-color: transparent;
-  transform-origin: center right;
-  transform: scaleX(0);
-  transition: transform 0.2s ease-in-out;
-}
-span:hover::before {
-  transform: scaleX(1);
-  transform-origin: center left;
-}
-span:active::before {
-  background-color: rgb(173, 90, 255);
-}
+
+  span {
+    padding: 15px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  span::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: -0.25em;
+    right: -0.25em;
+    border-bottom: 4px solid #04BBFF;
+    background-color: transparent;
+    transform-origin: center right;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  span:hover::before {
+    transform: scaleX(1);
+    transform-origin: center left;
+  }
+  span:active::before{
+    background-color: rgb(173, 90, 255);
+  }
 `
 
 Header.propTypes = {
