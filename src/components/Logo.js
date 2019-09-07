@@ -4,14 +4,17 @@ import LogoImage from '../images/logo.svg';
 
 const Logo = () => {
   return (
-    <Fragment>
+    <Container>
       <StyledLogo />
-    </Fragment>
+    </Container>
   );
 }
 
+const Container = styled.div`
+  max-width: 500px;
+`
+
 const StyledLogo = styled(LogoImage)`
-  width: 50%;
   .fil0, .fil1, .fil2, .fil3 {
     transition: 0.5s;
   }
