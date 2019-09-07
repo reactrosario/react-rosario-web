@@ -32,9 +32,10 @@ const SocialShare = () => (
 )
 
 const SocialShareWrapper = styled.div`
-  margin: 0 2%;
+  margin: 0 1rem;
   display: flex;
-  font-size: 22px;  
+  font-size: 22px;
+  justify-content: center;
 `;
 
 const Link = styled.a`
