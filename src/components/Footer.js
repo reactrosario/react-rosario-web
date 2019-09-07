@@ -29,7 +29,7 @@ const FooterContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;  
+  justify-content: space-between;  
 
   @media only screen and (min-width: 768px){
     flex-direction: row;
