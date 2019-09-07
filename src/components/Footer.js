@@ -38,7 +38,7 @@ const FooterContent = styled.div`
 const StyledText = styled.span`
   color: #55198B;
   font-weight: bold; 
-  
+  padding-right: .8rem;
 `;
 
 export default Footer
