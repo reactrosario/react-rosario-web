@@ -5,12 +5,14 @@ import styled, { createGlobalStyle } from "styled-components"
 import { StaticQuery, graphql, Link } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
+  faAd,
   faFacebookSquare,
   faGithub,
   faInstagram,
   faTwitter,
   faSlack,
 } from '@fortawesome/free-brands-svg-icons'
+import { faHome } from '@fontawesome/free-solid-svg-icons'
 
 const Header = () => (
   <HeaderWrapper>
@@ -31,9 +33,9 @@ const Header = () => (
         render={data => <StyledImg fluid={data.placeholderImage.childImageSharp.fluid} />}
       />
       <NavBar>
-        <StyledLink to="/"><span><FontAwesomeIcon  icon={faFacebookSquare} color="white"/>&nbsp;Inicio</span></StyledLink>
-        <StyledLink to="/"><span><FontAwesomeIcon  icon={faFacebookSquare} color="white"/>&nbsp;Blog</span></StyledLink>
-        <StyledLink to="/"><span><FontAwesomeIcon  icon={faFacebookSquare} color="white"/>&nbsp;Contacto</span></StyledLink>
+        <StyledLink to="/"><span><FontAwesomeIcon icon={faHome} color="white"/>&nbsp;Inicio</span></StyledLink>
+        <StyledLink to="/"><span><FontAwesomeIcon icon={faFacebookSquare} color="white"/>&nbsp;Blog</span></StyledLink>
+        <StyledLink to="/"><span><FontAwesomeIcon icon={faFacebookSquare} color="white"/>&nbsp;Contacto</span></StyledLink>
       </NavBar>
     </HeaderContent>
   </HeaderWrapper>
