@@ -1,14 +1,15 @@
 import React from "react"
 
+import Contributor from "../components/Contributor";
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Logo from '../components/Logo';
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
-    Page test
+    <SEO title="Contributors" />
+    <Contributor name="Juan" imageName="juan" contribution="#StyledComponent" social="https://github.com/reactrosario" />
+    <Contributor name="Gustavo" imageName="gustavo" contribution="#Gatsby" social="https://github.com/gustavo" />
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;
