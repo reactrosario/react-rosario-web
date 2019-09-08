@@ -40,12 +40,13 @@ const Body = styled.div `
   background-color: black;
   background-size: cover;
   background-image: url(${backgroundImage});
+  background-size: cover;
   font-family: 'Nanum Gothic', sans-serif;
   color: white;
   height: -webkit-fill-available;
-  height: 100%;
+  height: 1000px;
   position: absolute;
-  width: 100%;  
+  width: 100%;
 `
 
 const StyledMain = styled.main`
