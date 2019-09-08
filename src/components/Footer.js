@@ -17,7 +17,7 @@ const FooterWrapper = styled.div`
   padding: 10px;
   background: rgba(129,32,227,1);
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
 `;
 
