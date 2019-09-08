@@ -1,6 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import HeaderButton from './HeaderButton'
+
 import Img from "gatsby-image"
 import Media from 'react-media'
 
@@ -29,36 +31,9 @@ const Header = () => (
         render={data => <StyledImg fluid={data.placeholderImage.childImageSharp.fluid} />}
       />
       <NavBar>
-        <Media query="(min-width: 599px)">
-          {
-            matches =>
-            matches ? (
-                <StyledLink to="/"><span><FontAwesomeIcon icon={faHome} color="white"/>&nbsp;Inicio</span></StyledLink>
-            ) : (
-                <StyledLink to="/"><span><FontAwesomeIcon icon={faHome} color="white"/></span></StyledLink>      
-            )
-          }
-        </Media>
-        <Media query="(min-width: 599px)">
-          {
-            matches =>
-            matches ? (
-                <StyledLink to="/"><span><FontAwesomeIcon icon={faBlog} color="white"/>&nbsp;Blog</span></StyledLink>
-            ) : (
-                <StyledLink to="/"><span><FontAwesomeIcon icon={faBlog} color="white"/></span></StyledLink>
-            )
-          }
-        </Media>
-        <Media query="(min-width: 599px)">
-          {
-            matches =>
-            matches ? (
-              <StyledLink to="/"><span><FontAwesomeIcon icon={faInbox} color="white"/>&nbsp;Contacto</span></StyledLink>
-            ) : (
-              <StyledLink to="/"><span><FontAwesomeIcon icon={faInbox} color="white"/></span></StyledLink>
-            )
-          }
-        </Media>
+        <HeaderButton iconName={faHome} title="Home" />
+        <HeaderButton iconName={faBlog} title="Blog" />
+        <HeaderButton iconName={faInbox} title="Contacto" />
         
       </NavBar>
     </HeaderContent>
