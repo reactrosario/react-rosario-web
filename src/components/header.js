@@ -1,16 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types"
+
 import Img from "gatsby-image"
+import Media from 'react-media'
+
 import styled, { createGlobalStyle } from "styled-components"
 import { StaticQuery, graphql, Link } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faFacebookSquare,
-  faGithub,
-  faInstagram,
-  faTwitter,
-  faSlack,
-} from '@fortawesome/free-brands-svg-icons'
+
 import { faHome, faBlog, faInbox } from '@fortawesome/free-solid-svg-icons'
 
 const Header = () => (
@@ -32,9 +29,37 @@ const Header = () => (
         render={data => <StyledImg fluid={data.placeholderImage.childImageSharp.fluid} />}
       />
       <NavBar>
-        <StyledLink to="/"><span><FontAwesomeIcon icon={faHome} color="white"/>&nbsp;Inicio</span></StyledLink>
-        <StyledLink to="/"><span><FontAwesomeIcon icon={faBlog} color="white"/>&nbsp;Blog</span></StyledLink>
-        <StyledLink to="/"><span><FontAwesomeIcon icon={faInbox} color="white"/>&nbsp;Contacto</span></StyledLink>
+        <Media query="(min-width: 599px)">
+          {
+            matches =>
+            matches ? (
+                <StyledLink to="/"><span><FontAwesomeIcon icon={faHome} color="white"/>&nbsp;Inicio</span></StyledLink>
+            ) : (
+                <StyledLink to="/"><span><FontAwesomeIcon icon={faHome} color="white"/></span></StyledLink>      
+            )
+          }
+        </Media>
+        <Media query="(min-width: 599px)">
+          {
+            matches =>
+            matches ? (
+                <StyledLink to="/"><span><FontAwesomeIcon icon={faBlog} color="white"/>&nbsp;Blog</span></StyledLink>
+            ) : (
+                <StyledLink to="/"><span><FontAwesomeIcon icon={faBlog} color="white"/></span></StyledLink>      
+            )
+          }
+        </Media>
+        <Media query="(min-width: 599px)">
+          {
+            matches =>
+            matches ? (
+              <StyledLink to="/"><span><FontAwesomeIcon icon={faInbox} color="white"/>&nbsp;Contacto</span></StyledLink>
+            ) : (
+              <StyledLink to="/"><span><FontAwesomeIcon icon={faInbox} color="white"/></span></StyledLink>
+            )
+          }
+        </Media>
+        
       </NavBar>
     </HeaderContent>
   </HeaderWrapper>
@@ -109,9 +134,6 @@ const StyledLink = styled(Link)`
   span:hover::before {
     transform: scaleX(1);
     transform-origin: center left;
-  }
-  span:active::before{
-    background-color: rgb(173, 90, 255);
   }
 `
 
