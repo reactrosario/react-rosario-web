@@ -45,7 +45,7 @@ const Header = () => (
             matches ? (
                 <StyledLink to="/"><span><FontAwesomeIcon icon={faBlog} color="white"/>&nbsp;Blog</span></StyledLink>
             ) : (
-                <StyledLink to="/"><span><FontAwesomeIcon icon={faBlog} color="white"/></span></StyledLink>      
+                <StyledLink to="/"><span><FontAwesomeIcon icon={faBlog} color="white"/></span></StyledLink>
             )
           }
         </Media>
