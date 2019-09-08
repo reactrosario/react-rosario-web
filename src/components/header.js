@@ -34,7 +34,7 @@ const Header = () => (
 )
 
 const HeaderWrapper = styled.div`
-  margin: 2% 0;
+  // margin: 2% 0;
   width: 100%;
 
   && {
