@@ -9,10 +9,6 @@ import Media from 'react-media'
 import styled, { createGlobalStyle } from "styled-components"
 import { StaticQuery, graphql, Link } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-<<<<<<< HEAD
-
-import { faHome, faBlog, faInbox } from '@fortawesome/free-solid-svg-icons'
-=======
 import {
   faAd,
   faFacebookSquare,
@@ -21,8 +17,7 @@ import {
   faTwitter,
   faSlack,
 } from '@fortawesome/free-brands-svg-icons'
-import { faHome } from '@fontawesome/free-solid-svg-icons'
->>>>>>> progress
+import { faHome, faBlog, faInbox } from '@fontawesome/free-solid-svg-icons'
 
 const Header = () => (
   <HeaderWrapper>
@@ -43,16 +38,9 @@ const Header = () => (
         render={data => <StyledImg fluid={data.placeholderImage.childImageSharp.fluid} />}
       />
       <NavBar>
-<<<<<<< HEAD
-        <HeaderButton iconName={faHome} title="Home" />
-        <HeaderButton iconName={faBlog} title="Blog" />
-        <HeaderButton iconName={faInbox} title="Contacto" />
-        
-=======
         <StyledLink to="/"><span><FontAwesomeIcon icon={faHome} color="white"/>&nbsp;Inicio</span></StyledLink>
-        <StyledLink to="/"><span><FontAwesomeIcon icon={faFacebookSquare} color="white"/>&nbsp;Blog</span></StyledLink>
-        <StyledLink to="/"><span><FontAwesomeIcon icon={faFacebookSquare} color="white"/>&nbsp;Contacto</span></StyledLink>
->>>>>>> progress
+        <StyledLink to="/"><span><FontAwesomeIcon icon={faBlog} color="white"/>&nbsp;Blog</span></StyledLink>
+        <StyledLink to="/"><span><FontAwesomeIcon icon={faInbox} color="white"/>&nbsp;Contacto</span></StyledLink>
       </NavBar>
     </HeaderContent>
   </HeaderWrapper>
